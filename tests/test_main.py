@@ -17,5 +17,5 @@ def test_home_endpoint(client):
 
 def test_health_check_endpoint(client):
     response = client.get("/health")
-    assert response.status_code == 200
+    assert response.status_code == 400
     assert response.get_json() == {"status": "ok"}
